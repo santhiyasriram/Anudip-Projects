@@ -1,0 +1,36 @@
+
+<div></div>
+<h2>Register List</h2>
+<h3 text="center">Booking List</h3>
+<div class="container">
+    <div class="card m-5 p-3">
+        <div class="card-body"><div class="border">
+            <button class="btn btn-md btn-outline-primary">
+              <a href="hotel-booking">Add </a></button>
+          </div></div>
+          <table class="table table-bordered table-striped table-hover">
+              <thead>
+              <tr>
+                  <th>RoomId</th>
+                  <th>RoomType</th>
+                  <th>Price</th>
+                  <th>GuestId</th>
+                  <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let room of rooms">
+                  <td>{{ room.roomId }}</td>
+                  <td>{{ room.roomType}}</td>
+                  <td>{{ room.price! }}</td>
+                  <td>{{ room.guestId }}</td>
+                  <td>
+                    <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" >Edit</button>
+                    <button type="button" class="btn btn-outline-danger" >Delete</button>
+                </td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>

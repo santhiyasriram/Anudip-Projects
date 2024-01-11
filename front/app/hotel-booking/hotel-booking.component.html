@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+
+</head>
+<body>
+
+  <form (ngSubmit)="hotel()">
+    <h2>Hotel Booking</h2>
+    
+   <label for="name">GuestId</label>
+   <input type="number"  [(ngModel)]="room.guestId" [ngModelOptions]="{standalone: true}" id="Number" name="hotelbookingName" required>
+   <label for="name">RoomType</label>
+   <select name="pets"  [(ngModel)]="room.roomType" [ngModelOptions]="{standalone: true}"  id="pet-select">
+    
+    <option value="single">single</option>
+    <option value="double">double</option></select>
+   
+   
+   <label for="name">Price</label>
+   <input type="number"  [(ngModel)]="room.price" [ngModelOptions]="{standalone: true}" id="Number" name="hotelbookingName" required>
+
+   
+   <button type="submit" class="btn btn-primary" > booking</button>&nbsp;&nbsp;
+   
+   <button><a href="booking-list">view</a> </button> 
+  </form>
+
+</body>
+</html>
